@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="description"
+        content="<%= settings?.about || 'Praveen Kitkat - Professional Magician and Entertainer' %>">
+
+  <title>
+    <%= settings?.name || 'Praveen Kitkat' %> |
+    Professional Magician & Entertainer
+  </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+<style>
+/* =========================================================
+   PRAVEEN KITKAT — PREMIUM MAGIC WEBSITE
+   DESIGN ONLY — DO NOT CHANGE EJS/HTML
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(215,170,82,.08), transparent 30%),
+    radial-gradient(circle at 85% 35%, rgba(215,170,82,.05), transparent 28%),
+    #080808;
+  color: #f5f5f5;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 6%;
+
+  background: rgba(5,5,5,.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(215,170,82,.18);
+}
+
+.brand {
+  font-family: Cinzel, Georgia, serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #d7aa52;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #ddd;
+  font-size: 14px;
+  transition: .3s ease;
+}
+
+.nav-links a:hover {
+  color: #d7aa52;
+}
+
+.nav-button {
+  padding: 10px 18px;
+  border: 1px solid #d7aa52;
+  border-radius: 30px;
+  color: #d7aa52 !important;
+  transition: .3s ease;
+}
+
+.nav-button:hover {
+  background: #d7aa52;
+  color: #080808 !important;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 60px;
+  padding: 140px 7% 90px;
+
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(215,170,82,.18),
+      transparent 38%
+    );
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #d7aa52;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: 1.03;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+.hero h1 span {
+  color: #d7aa52;
+}
+
+.hero p {
+  color: #bbb;
+  font-size: 18px;
+  max-width: 560px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: .3s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #d7aa52, #f1ce7a);
+  color: #080808;
+  box-shadow: 0 10px 30px rgba(215,170,82,.18);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(215,170,82,.30);
+}
+
+.btn-outline {
+  border: 1px solid #777;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  border-color: #d7aa52;
+  color: #d7aa52;
+  transform: translateY(-4px);
+}
+
+.hero-image {
+  position: relative;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: cover;
+
+  border-radius: 22px;
+  border: 1px solid rgba(215,170,82,.35);
+
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.65),
+    0 0 50px rgba(215,170,82,.10);
+}
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+  padding: 100px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.section-heading small {
+  display: block;
+  color: #d7aa52;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.section-heading h2 {
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(32px, 5vw, 52px);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  max-width: 650px;
+  margin: auto;
+  color: #999;
+}
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+  background:
+    linear-gradient(
+      180deg,
+      #0d0d0d,
+      #090909
+    );
+}
+
+.about-grid {
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text p {
+  color: #aaa;
+  font-size: 17px;
+  margin-bottom: 22px;
+}
+
+.about-card {
+  padding: 35px;
+
+  background: linear-gradient(
+    145deg,
+    rgba(25,25,25,.95),
+    rgba(12,12,12,.95)
+  );
+
+  border: 1px solid rgba(215,170,82,.20);
+  border-radius: 18px;
+
+  box-shadow: 0 25px 70px rgba(0,0,0,.35);
+}
+
+.about-card h3 {
+  color: #d7aa52;
+  font-family: Cinzel, Georgia, serif;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: #aaa;
+}
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: #111;
+  border: 1px solid #242424;
+  border-radius: 18px;
+  overflow: hidden;
+
+  transition: .35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #d7aa52;
+  box-shadow: 0 20px 50px rgba(0,0,0,.45);
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 25px;
+}
+
+.service-content h3 {
+  font-family: Cinzel, Georgia, serif;
+  color: #d7aa52;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  color: #999;
+  font-size: 14px;
+}
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+  background: #0d0d0d;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  aspect-ratio: 4 / 3;
+  background: #151515;
+  border: 1px solid #222;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 35px 18px 18px;
+
+  background: linear-gradient(
+    transparent,
+    rgba(0,0,0,.9)
+  );
+
+  color: #fff;
+  font-weight: 600;
+}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.testimonial {
+  padding: 30px;
+
+  background: #111;
+  border: 1px solid #252525;
+  border-radius: 18px;
+
+  transition: .3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  border-color: rgba(215,170,82,.45);
+}
+
+.stars {
+  color: #d7aa52;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.testimonial p {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.testimonial strong {
+  color: #fff;
+}
+
+/* =========================================================
+   CONTACT / ENQUIRY
+   ========================================================= */
+
+.contact {
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(215,170,82,.12),
+      transparent 45%
+    );
+}
+
+.contact-box {
+  max-width: 850px;
+  margin: auto;
+
+  padding: 40px;
+
+  background: rgba(15,15,15,.92);
+  border: 1px solid #292929;
+  border-radius: 22px;
+
+  box-shadow: 0 30px 80px rgba(0,0,0,.45);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group.full {
+  grid-column: 1 / -1;
+}
+
+label {
+  display: block;
+  color: #bbb;
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px;
+
+  background: #080808;
+  color: #fff;
+
+  border: 1px solid #333;
+  border-radius: 9px;
+
+  outline: none;
+  font: inherit;
+
+  transition: .3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #d7aa52;
+  box-shadow: 0 0 0 3px rgba(215,170,82,.08);
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.submit {
+  width: 100%;
+  margin-top: 10px;
+
+  padding: 15px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: linear-gradient(
+    135deg,
+    #d7aa52,
+    #f0ca72
+  );
+
+  color: #080808;
+  font-weight: 700;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(215,170,82,.25);
+}
+
+/* =========================================================
+   WHATSAPP
+   ========================================================= */
+
+.whatsapp {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 999;
+
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #25d366;
+  color: white;
+
+  font-size: 26px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,.4);
+
+  transition: .3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 45px 7%;
+
+  text-align: center;
+
+  border-top: 1px solid #222;
+
+  color: #777;
+}
+
+footer strong {
+  color: #d7aa52;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .nav {
+    padding: 15px 5%;
+  }
+
+  .brand {
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* PREMIUM MOBILE HERO */
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 100px 5% 55px;
+    gap: 28px;
+  }
+
+  .hero-image {
+    order: -1;
+    width: 100%;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 520px;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 3.5px;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    line-height: 1.04;
+    letter-spacing: -1px;
+    margin-bottom: 17px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .hero-buttons {
+    gap: 10px;
+  }
+
+  section {
+    padding: 65px 5%;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .services-grid,
+  .gallery-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-box {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group.full {
+    grid-column: auto;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .service-card img {
+    height: 220px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 92px 5% 48px;
+    gap: 24px;
+  }
+
+  .hero-image img {
+    height: 455px;
+    max-height: 455px;
+    border-radius: 18px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .eyebrow {
+    letter-spacing: 2.8px;
+    font-size: 10.5px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 13px 22px;
+  }
+
+  .about-card,
+  .contact-box,
+  .testimonial {
+    padding: 22px;
+  }
+
+  .whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 56px;
+    height: 56px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+
+  <a href="#home" class="brand">
+    <%= settings?.name || 'PRAVEEN KITKAT' %>
+  </a>
+
+  <div class="nav-links">
+
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Shows</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+
+    <a href="#contact" class="nav-button">
+      Book Now
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      Professional Magician & Entertainer
+    </div>
+
+    <h1>
+      Creating
+      <span>Impossible</span>
+      Moments
+    </h1>
+
+    <p>
+      <%= settings?.tagline ||
+      'Magical entertainment that makes every celebration unforgettable.' %>
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#contact" class="btn btn-primary">
+        Book a Show
+      </a>
+
+      <a href="#services" class="btn btn-outline">
+        Explore Shows
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-image">
+
+    <img
+      src="/uploads/hero.jpg"
+      alt="Praveen Kitkat Magic Show"
+    >
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="section-heading">
+
+    <small>About</small>
+
+    <h2>The Magic Behind The Moments</h2>
+
+  </div>
+
+
+  <div class="about-grid">
+
+    <div class="about-text">
+
+      <p>
+        <%= settings?.about ||
+        'Praveen Kitkat is a professional magician and entertainer delivering memorable live performances for audiences of all ages.' %>
+      </p>
+
+      <p>
+        From intimate close-up magic to large stage performances,
+        every show is designed to surprise, entertain and create
+        unforgettable memories.
+      </p>
+
+    </div>
+
+
+    <div class="about-card">
+
+      <h3>Available For</h3>
+
+      <p>
+        Weddings • Corporate Events • Birthdays • Kids Events
+        • Private Parties • Stage Shows • Special Events
+      </p>
+
+      <br>
+
+      <p>
+        📍 <%= settings?.city || 'India' %>
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+  <div class="section-heading">
+
+    <small>Entertainment</small>
+
+    <h2>Choose Your Experience</h2>
+
+    <p>
+      Professional entertainment tailored to your event.
+    </p>
+
+  </div>
+
+
+  <div class="services-grid">
+
+    <% if (services && services.length) { %>
+
+      <% services.forEach(service => { %>
+
+        <article class="service-card">
+
+          <% if (service.image) { %>
+
+            <img
+              src="/uploads/<%= service.image %>"
+              alt="<%= service.title || 'Magic Show' %>"
+            >
+
+          <% } %>
+
+          <div class="service-content">
+
+            <h3>
+              <%= service.title || 'Magic Show' %>
+            </h3>
+
+            <p>
+              <%= service.description || '' %>
+            </p>
+
+          </div>
+
+        </article>
+
+      <% }) %>
+
+    <% } else { %>
+
+      <article class="service-card">
+
+        <img src="/uploads/stage-magic.jpg"
+             alt="Stage Magic">
+
+        <div class="service-content">
+
+          <h3>Stage Magic</h3>
+
+          <p>
+            A spectacular stage performance packed with
+            visual magic, comedy and audience interaction.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <img src="/uploads/close-up-magic.jpg"
+             alt="Close Up Magic">
+
+        <div class="service-content">
+
+          <h3>Close-Up Magic</h3>
+
+          <p>
+            Interactive magic performed right in front
+            of your guests.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="service-card">
+
+        <img src="/uploads/juggling.jpg"
+             alt="Juggling Show">
+
+        <div class="service-content">
+
+          <h3>Juggling Show</h3>
+
+          <p>
+            Energetic juggling and visual entertainment
+            perfect for celebrations and events.
+          </p>
+
+        </div>
+
+      </article>
+
+    <% } %>
+
+  </div>
+
+</section>
+
+
+<!-- GALLERY -->
+
+<section class="gallery" id="gallery">
+
+  <div class="section-heading">
+
+    <small>Portfolio</small>
+
+    <h2>Moments Of Magic</h2>
+
+  </div>
+
+
+  <div class="gallery-grid">
+
+    <% if (gallery && gallery.length) { %>
+
+      <% gallery.forEach(item => { %>
+
+        <div class="gallery-item">
+
+          <img
+            src="/uploads/<%= item.image %>"
+            alt="<%= item.title || 'Magic performance' %>"
+          >
+
+          <div class="gallery-title">
+            <%= item.title || 'Magic Performance' %>
+          </div>
+
+        </div>
+
+      <% }) %>
+
+    <% } else { %>
+
+      <div class="gallery-item">
+        <img src="/uploads/hero.jpg" alt="Magic">
+        <div class="gallery-title">Live Magic</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/uploads/stage-performance.jpg" alt="Stage Performance">
+        <div class="gallery-title">Stage Performance</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/uploads/live-show.jpg" alt="Live Show">
+        <div class="gallery-title">Live Show</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/uploads/juggling.jpg" alt="Juggling">
+        <div class="gallery-title">Juggling</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/uploads/corporate-show.jpg" alt="Corporate Show">
+        <div class="gallery-title">Corporate Events</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="/uploads/kids-show.jpg" alt="Kids Show">
+        <div class="gallery-title">Kids Shows</div>
+      </div>
+
+    <% } %>
+
+  </div>
+
+</section>
+
+
+<!-- TESTIMONIALS -->
+
+<section id="reviews">
+
+  <div class="section-heading">
+
+    <small>Client Reviews</small>
+
+    <h2>What People Say</h2>
+
+  </div>
+
+
+  <div class="testimonials-grid">
+
+    <% if (testimonials && testimonials.length) { %>
+
+      <% testimonials.forEach(review => { %>
+
+        <div class="testimonial">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            "<%= review.text || '' %>"
+          </p>
+
+          <strong>
+            — <%= review.name || 'Happy Client' %>
+          </strong>
+
+        </div>
+
+      <% }) %>
+
+    <% } else { %>
+
+      <div class="testimonial">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          "Amazing performance! Everyone loved the magic."
+        </p>
+
+        <strong>— Happy Client</strong>
+
+      </div>
+
+
+      <div class="testimonial">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          "Professional, entertaining and perfect for our event."
+        </p>
+
+        <strong>— Event Client</strong>
+
+      </div>
+
+
+      <div class="testimonial">
+
+        <div class="stars">★★★★★</div>
+
+        <p>
+          "The kids absolutely loved the show!"
+        </p>
+
+        <strong>— Happy Parent</strong>
+
+      </div>
+
+    <% } %>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT / ENQUIRY -->
+
+<section class="contact" id="contact">
+
+  <div class="section-heading">
+
+    <small>Bookings</small>
+
+    <h2>Let's Create Some Magic</h2>
+
+    <p>
+      Tell us about your event and we'll get back to you.
+    </p>
+
+  </div>
+
+
+  <div class="contact-box">
+
+    <form action="/enquiry" method="POST">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+
+          <label>Your Name *</label>
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Phone Number *</label>
+
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter your phone number"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Event Date</label>
+
+          <input
+            type="date"
+            name="event_date"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>Event Type</label>
+
+          <select name="event_type">
+
+            <option value="">
+              Select event
+            </option>
+
+            <option>Wedding</option>
+            <option>Corporate Event</option>
+            <option>Birthday</option>
+            <option>Kids Event</option>
+            <option>Private Party</option>
+            <option>Stage Show</option>
+            <option>Other</option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group full">
+
+          <label>Message</label>
+
+          <textarea
+            name="message"
+            placeholder="Tell us about your event..."
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="btn btn-primary submit"
+      >
+        Send Enquiry
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<!-- WHATSAPP -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/<%= settings?.phone || '' %>"
+  target="_blank"
+  aria-label="WhatsApp"
+>
+  ☎
+</a>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+
+    © <%= new Date().getFullYear() %>
+
+    <strong>
+      <%= settings?.name || 'Praveen Kitkat' %>
+    </strong>
+
+    — Professional Magician & Entertainer
+
+  </p>
+
+</footer>
+
+
+</body>
+</html>
