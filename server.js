@@ -139,6 +139,8 @@ function waLink(message) {
 function auth(req,res,next){ if(req.session.admin) return next(); res.redirect("/admin/login"); }
 
 app.get("/", (req,res) => {
+  console.log("HOME PAGE REQUEST RECEIVED");
+
   const settings = db.prepare("SELECT * FROM settings WHERE id=1").get();
   const services = db.prepare("SELECT * FROM services ORDER BY sort_order,id").all();
   const testimonials = db.prepare("SELECT * FROM testimonials ORDER BY id DESC").all();
