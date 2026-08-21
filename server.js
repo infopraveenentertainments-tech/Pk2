@@ -214,4 +214,5 @@ app.post("/admin/enquiries/:id/status",auth,(req,res)=>{
 
 app.use((err,req,res,next)=>{ console.error(err); res.status(400).send(err.message || "Something went wrong."); });
 app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Praveen Kitkat website running on port ${PORT}`);});
+  console.log(`Praveen Kitkat website running on port ${PORT}`);
+});
