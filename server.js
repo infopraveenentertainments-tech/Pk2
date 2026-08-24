@@ -236,6 +236,37 @@ app.get("/sitemap.xml", (req, res) => {
   res.send(sitemap);
 });
 app.use((err,req,res,next)=>{ console.error(err); res.status(400).send(err.message || "Something went wrong."); });
+app.get("/about", (req, res) => {
+  res.render("about");
+});
+
+app.get("/contact", (req, res) => {
+  res.render("contact");
+});
+
+app.get("/services", (req, res) => {
+  res.render("services");
+});
+
+app.get("/magic-show", (req, res) => {
+  res.render("magic-show");
+});
+
+app.get("/birthday-party-magic-show", (req, res) => {
+  res.render("birthday-party-magic-show");
+});
+
+app.get("/corporate-magic-show", (req, res) => {
+  res.render("corporate-magic-show");
+});
+
+app.get("/wedding-entertainment", (req, res) => {
+  res.render("wedding-entertainment");
+});
+
+app.get("/gallery", (req, res) => {
+  res.render("gallery");
+});
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Praveen Kitkat website running on port ${PORT}`);
 });
