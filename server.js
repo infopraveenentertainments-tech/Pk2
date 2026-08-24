@@ -267,6 +267,37 @@ app.get("/wedding-entertainment", (req, res) => {
 app.get("/gallery", (req, res) => {
   res.render("gallery");
 });
+app.get("/corporate-magic-show", (req, res) => {
+  res.render("corporate-magic-show");
+});
+
+app.get("/wedding-entertainment", (req, res) => {
+  res.render("wedding-entertainment");
+});
+
+app.get("/kids-magic-show", (req, res) => {
+  res.render("kids-magic-show");
+});
+
+app.get("/magician-in-bangalore", (req, res) => {
+  res.render("magician-in-bangalore");
+});
+
+app.get("/magician-for-corporate-events-bangalore", (req, res) => {
+  res.render("magician-for-corporate-events-bangalore");
+});
+
+app.get("/birthday-party-magician-bangalore", (req, res) => {
+  res.render("birthday-party-magician-bangalore");
+});
+
+app.get("/wedding-magician-bangalore", (req, res) => {
+  res.render("wedding-magician-bangalore");
+});
+
+app.get("/gallery", (req, res) => {
+  res.render("gallery");
+});
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Praveen Kitkat website running on port ${PORT}`);
 });
