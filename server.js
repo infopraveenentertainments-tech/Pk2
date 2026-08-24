@@ -213,7 +213,28 @@ app.post("/admin/enquiries/:id/status",auth,(req,res)=>{
   db.prepare("UPDATE enquiries SET status=? WHERE id=?").run(req.body.status,req.params.id);
   res.redirect("/admin#enquiries");
 });
+app.get("/sitemap.xml", (req, res) => {
+  res.set("Content-Type", "application/xml");
 
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://praveenkitkat.in/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.praveenkitkat.in/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+</urlset>`;
+
+  res.send(sitemap);
+});
 app.use((err,req,res,next)=>{ console.error(err); res.status(400).send(err.message || "Something went wrong."); });
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Praveen Kitkat website running on port ${PORT}`);
