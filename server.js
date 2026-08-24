@@ -219,17 +219,89 @@ app.get("/sitemap.xml", (req, res) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://praveenkitkat.in/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://praveenkitkat.in/</loc>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
 
-  <url>
-    <loc>https://www.praveenkitkat.in/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+<url>
+<loc>https://praveenkitkat.in/about</loc>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/services</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/contact</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/gallery</loc>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/magic-show</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/corporate-magic-show</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/birthday-party-magic-show</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/wedding-entertainment</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/kids-magic-show</loc>
+<changefreq>monthly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/magician-in-bangalore</loc>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/magician-for-corporate-events-bangalore</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/birthday-party-magician-bangalore</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+
+<url>
+<loc>https://praveenkitkat.in/wedding-magician-bangalore</loc>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 
 </urlset>`;
 
